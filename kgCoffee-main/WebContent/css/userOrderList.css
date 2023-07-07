@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Noto Sans KR', sans-serif; /* 구글폰트 */
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+}
+
+
+html {
+	font-size: 62.5%;
+	overflow: scroll /* 스크롤바 */
+}
+
+body {
+	background-color: #f4f6f8;
+}
+
+.mypage {
+	min-height: calc(80vh - 10rem);
+	display: flex;
+    justify-content: center;
+}
+
+.payment {
+  	margin: 30px auto;
+}
+
+
+
+
+.select_btn_list {
+	display: inline-block;
+	width: 700px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px, rgba(0, 0, 0, 0.16) 0px 0px 1px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    padding: 20px 0px;
+	text-align: center;
+}
+
+.item{
+    
+}
+
+.paymentItem {
+	display: grid;
+	gap: 1.5rem;
+	align-content:center;
+	
+	width: 700px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px, rgba(0, 0, 0, 0.16) 0px 0px 1px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    padding: 24px 35px 24px;
+	
+
+    
+}
+div.content{
+    
+	
+
+}
+
+div.content ul.paymentList{
+
+
+    min-height:300px;
+    max-height: 600px;
+    overflow: auto;
+
+}
+
+.btn_refund_order{
+
+    cursor: pointer;
+    border-radius: 3px;
+    width: 70px;
+    height: 30px;
+    background: #FDD000;
+    font-size: 16px;
+    color: #000;
+
+}
+
+.btn_refund_order:hover{
+    color: #000;
+    background: #F0F0F0;
+}
+
+
+
+div .select_btn {
+	display: inline-block;
+	vertical-align: middle;
+	
+	box-sizing:border-box;
+	width: 45%;
+	margin: 0 calc(5%/3);
+}
+
+
+
+div .select_btn:first-child{
+	
+	margin-right: 0;
+}
+
+.product_content {
+	margin-bottom: 10px;
+}
+
+div .product_content_list {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div .product_content_list .content_list_box {
+	display: grid;
+	gap: 0.4rem;
+}
+
+div .product_content_list img {
+	margin-right: 10px;
+	width: 150px;
+}
+
+
+
+.order_date {
+	font-size: 22px;
+	padding-bottom: 10px;
+}
+
+.menu_name {
+	font-size: 18px;
+}
+
+div .product_content_list a {
+	font-size: 18px;
+}
+
+/* 버튼 */
+.btn_order_list { 
+	font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -.3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    min-height: 34px;
+    padding: 8px 6px 7px;
+    border-radius: 6px;
+    background-color: #ecf0f1;
+    font-weight: 500;
+    color: #2f3640;
+}
+
+.btn_order_list:hover { 
+	font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -.3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    min-height: 34px;
+    padding: 8px 6px 7px;
+    border-radius: 6px;
+    background-color: #f9ca24;
+    font-weight: 500;
+    color: #fff;
+}
+
+.btn_select_list { 
+	font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -.3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    min-height: 34px;
+    padding: 8px 6px 7px;
+    border-radius: 6px;
+    background-color: #ecf0f1;
+    font-weight: 500;
+    color: #2f3640;
+}
+
+.btn_select_list:hover { 
+	font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -.3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    min-height: 34px;
+    padding: 8px 6px 7px;
+    border-radius: 6px;
+    background-color: #f9ca24;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+    
+    .paymentList::-webkit-scrollbar {
+    
+    width: 5px;
+    height: 5px;
+    background: #f2f2f2;
+    
+    }
+    
+    .paymentList::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: #FDD000;
+    /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+    
+    }
+    
+    .paymentList::-webkit-scrollbar-track {
+    
+    background: #EEE;
+    /*스크롤바 뒷 배경 색상*/
+    
+    }

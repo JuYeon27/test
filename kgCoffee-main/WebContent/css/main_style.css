@@ -1,0 +1,132 @@
+@charset "UTF-8";
+	
+*{
+	font-family: 'Noto Sans KR', sans-serif; /* 구글폰트 */
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+}
+
+html {
+	font-size: 62.5%;
+	overflow: scroll;
+}
+
+
+section {
+	padding: 3rem 10%;
+}
+
+
+.btn {
+	margin-top: 1rem;
+	display: inline-block;
+	background: #F79F1F;
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+	padding: 1rem 3rem;
+}
+
+.btn:hover {
+	letter-spacing: .2rem;
+	background: #ffb142;
+}
+
+/* home section ------------------------------------------------------------- */
+
+.home {
+	/* padding-top: 3rem; */
+	padding-bottom: .5rem;
+}
+
+.home .slide {
+	min-height: 85vh;
+	background-size: cover !important;
+	background-position: center !important;
+	position: relative;
+	z-index: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.home .slide::before {
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.7); 
+	z-index: -1;
+}
+
+.home .slide .content {
+	text-align: center;
+	width: 70rem;
+}
+
+.home .slide .content span {
+	font-size: 2.5rem;
+	display: block;
+	padding-bottom: .5rem;
+	color: #ccc;
+}
+
+.home .slide .content h3 {
+	font-size: 7vw;
+	color: #f5f6fa;
+	text-shadow: 0 .5rem 1rem rgba(0,0,0,.7);
+	line-height: 1;
+	padding: 1rem 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	color: #FFC312 !important;
+}
+
+/* about section ------------------------------------------------------------- */
+
+.about {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 2rem;
+}
+
+.about .image {
+	flex: 1 1 41rem;
+}
+
+.about .image img {
+	width: 85%;
+}
+
+.about .content {
+	flex: 1 1 41rem;
+	margin-left: 1rem;
+}
+
+.about .content .title {
+	font-size: 4rem;
+	color: black;
+}
+
+.about .content p {
+	font-size: 2rem;
+	color: #576574;
+	padding: 1rem 0;
+	line-height: 2;
+}

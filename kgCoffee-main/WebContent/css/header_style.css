@@ -1,0 +1,180 @@
+@charset "UTF-8";
+	
+* {
+	font-family: 'Noto Sans KR', sans-serif; /* 구글폰트 */
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+}
+
+
+html {
+	font-size: 62.5%;
+	overflow: scroll /* 스크롤바 */
+}
+
+
+/* header section ------------------------------------------------------------- */
+
+.header_wrap{
+	position:relative;
+	display:flex;
+	width:100%;
+	height:76.63px;	
+
+}
+
+header {
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	background: #fff;
+	padding: .4rem 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+	box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.1);
+}
+
+header .navbar a {
+	font-size: 1.5rem;
+	border-radius: .5rem;
+	padding: .9rem 1.7rem;
+	color: #666;
+	text-decoration: none;
+}
+
+/* 마우스 올리면 폰트색 흰색, 배경 노란색 */
+header .navbar a:hover {
+	color: #fff;
+	background: #f9ca24;
+}
+
+header .icons i,
+header .icons a {
+ 	cursor: pointer;
+	margin-left: .5rem;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	width: 4.5rem;
+	text-align: center;
+	font-size: 1.8rem; 
+	color: #192a56;
+	border-radius: 50%;
+	background: #eee;
+}
+
+/* 아이콘에 마우스 올리면 폰트색 흰색, 배경 노란색 */
+header .icons i:hover,
+header .icons a:hover {
+	color: #fff;
+	background: #f9ca24;
+}
+
+header .icons #menu-bar {
+	display: none;
+}
+
+/* footer section ------------------------------------------------------------- */
+.footer {
+	text-align: center;
+	background: #fff;
+}
+
+.footer .icons-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 1.5rem;
+}
+
+.footer .icons-container .icons {
+	text-align: center;
+	padding: 3rem 2rem;
+	
+}
+
+.footer .icons-container .icons i {
+	height: 5rem;
+	width: 5rem;
+	border-radius: 50%;
+	background: #feca57;
+	color: #fff;
+	margin-bottom: 1rem;
+	line-height: 4.9rem;
+	font-size: 2rem;
+}
+
+.footer .icons-container .icons h3 {
+	font-size: 1.8rem;
+	color: #222f3e;
+	padding: .5rem 0;
+}
+
+.footer .icons-container .icons p {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	color: #576574;
+}
+
+.footer .credit {
+	text-align: center;
+	border-top: .1rem solid rgba(0,0,0,.1);
+	font-size: 2rem;
+	color: #192a56;
+	padding: .5rem;
+	padding-top: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.footer .credit span {
+	color: #ff9f43;
+}
+
+
+/* media queries -------------------------------------------------------------- */
+/* 화면을 줄였을때 menu-bar(아이콘)에 메뉴가 옮겨지도록 */
+@media (max-width:885px) {
+	
+	header {
+		padding: 1rem 4rem;	
+	}
+	
+	header .icons #menu-bar {
+		display: inline-block;
+	}
+	
+	header nav.navbar {
+		position: absolute;
+		top:100%; left:0%; right:0%;
+		text-align: center;
+		background: #fff;
+		border-top: .1rem solid rgba(0,0,0,.2);
+		border-bottom: .1rem solid rgba(0,0,0,.2);
+		padding: 1rem;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+	
+	header nav.navbar.header_active {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		display:block;
+	}
+	
+	header nav.navbar a {
+		display: block;
+		padding: 1.5rem;
+		margin: 1.5rem;
+		font-size: 2rem;
+		background: #eee;
+		text-decoration: none;
+		outline: none;
+		border: none;
+	}
+	
+}

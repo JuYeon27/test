@@ -1,0 +1,983 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+#map {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.map_wrap,
+.map_wrap * {
+    /* width: 20%;
+    height: 70vh; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+
+}
+
+/* .map_wrap a,
+.map_wrap a:hover,
+.map_wrap a:active {
+    color: #000;
+    text-decoration: none;
+} */
+.map_wrap {
+    position: relative;
+    width: 100%;
+    height: 640px;
+}
+
+.map_wrap div.map_marker_pop_wrap {
+
+    padding: 15px;
+    width: 200px;
+    height: auto;
+    min-height: 200px;
+}
+
+.map_wrap div.map_marker_pop {
+    padding: 0;
+    z-index: 1;
+    border: none;
+    border-radius: 3px;
+
+} 
+
+.map_wrap div.map_marker_pop .map_marker_pop_header {
+    display: block;
+    position: relative;
+    height: 10%;
+    color: #000;
+    font-size: 19.6px;
+    font-weight: 400;
+    line-height: 19.6px;
+    padding: 5px 0;
+
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.map_wrap div.map_marker_pop div.close {
+    display: inline-block;
+    display: inline;
+    line-height: 9px;
+    text-align: center;
+}
+
+.map_wrap div.map_marker_pop div.close:after {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #000;
+    width: 14px;
+    height: 13px;
+    z-index: 100;
+    content: "\00d7";
+    font-size: 6pt;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.map_wrap div.map_marker_pop .map_marker_pop_inner {}
+
+.map_wrap div.map_marker_pop .map_marker_pop_inner .cont_wrap {
+
+    min-height: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.map_wrap div.map_marker_pop .map_marker_pop_inner .cont_wrap p {
+    margin-top: 10px;
+    color: #666;
+    float: left;
+    font-size: 12.6px;
+    min-height: 14px;
+    line-height: 14px;
+    margin-top: 10px;
+    padding-left: 17px;
+    width: 237px;
+}
+
+.map_wrap div.map_marker_pop .map_marker_pop_inner .cont_wrap p.road_addr {
+
+    background: url("/kgCoffee/img/icon/icon_addr.png") 0 0 no-repeat;
+}
+
+.map_wrap div.map_marker_pop .map_marker_pop_inner .cont_wrap p.tel {
+    background: url("/kgCoffee/img/icon/icon_tel.png") 0 0 no-repeat;
+}
+
+.map_wrap div.map_marker_pop .map_marker_pop_inner .cont_wrap a {
+    background: #222;
+    border-radius: 3px;
+    bottom: 25px;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+    left: 50%;
+    line-height: 30px;
+    margin-left: -45px;
+    position: absolute;
+    text-align: center;
+    width: 90px;
+}
+
+#menu_wrap {
+
+
+    height: 89%;
+    width: 320px;
+
+
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: rgba(255, 255, 255);
+    z-index: 3;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+.find_store_wrap {}
+
+.find_store_wrap .find_store_cont {}
+
+.bg_white {
+    background: #fff;
+}
+
+#menu_wrap .find_store_header {
+
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+
+
+    width: 100%;
+    height: 9%;
+    text-align: center;
+    border: 0px;
+
+}
+
+
+
+#menu_wrap .find_store_header>ul {
+    width: 100%;
+    height: 100%;
+
+
+
+    clear: both;
+}
+
+#menu_wrap .find_store_header>ul>li {
+
+
+    width: 50%;
+    height: 100%;
+
+
+    background: #000000;
+    color: #FFF;
+
+
+    cursor: pointer;
+    float: left;
+
+    list-style: none;
+    line-height: 3em;
+    font-size: 16px;
+
+}
+
+#menu_wrap .find_store_header>ul>li.active {
+    color: #000;
+    background: #FDD000;
+
+
+}
+
+#menu_wrap .find_store_header * {
+    color: #000;
+    line-height: 58px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#menu_wrap .search_count {
+    background: #f4f4f2;
+    display: block;
+    color: #444;
+    font-size: 14px;
+    line-height: inherit;
+    text-indent: 10px;
+    margin-top: 0px;
+    height: 22px;
+    width: 100%;
+}
+
+#menu_wrap .search {
+
+    width: 100%;
+    display: none;
+    box-sizing: border-box;
+
+    height: 91%;
+}
+
+#menu_wrap .search.active {
+
+    display: block;
+
+}
+
+#menu_wrap .search .quick_search {
+    height: 31%;
+
+    position: relative;
+    background: #FDD000;
+    text-align: center;
+
+
+    padding: 20px;
+    box-sizing: border-box;
+
+
+}
+
+#menu_wrap .search .quick_search .quick_search_title b {
+
+    font-size: 22.4px;
+    line-height: 1.2;
+
+}
+
+#menu_wrap .search .quick_search .quick_search_content {
+
+    margin: 20px 0;
+    font-size: 16px;
+
+}
+
+#menu_wrap .search .quick_search_inner_wrap {
+
+    width: 100%;
+    height: 45px;
+}
+
+#menu_wrap .search .quick_search_inner {
+
+    position: relative;
+    border: 0px solid #000;
+    border-radius: 4px;
+    background: #fff;
+
+}
+
+#menu_wrap .search .quick_search_inner input {
+
+    width: 100%;
+    height: 100%;
+
+
+    padding: 5px 15px;
+
+    border: 0px solid #000;
+    border-radius: 4px;
+
+}
+
+#menu_wrap .search .quick_search_inner a i {
+    position: absolute;
+
+    top: 50%;
+    right: 4%;
+    transform: translate(0, -50%);
+    line-height: 40px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+
+
+    z-index: 5;
+}
+
+#menu_wrap .search_result {
+    height: 69%;
+    overflow: auto;
+    padding: 20px;
+
+}
+
+#placesList::-webkit-scrollbar {
+
+    width: 5px;
+    height: 5px;
+    background: #f2f2f2;
+
+}
+
+#placesList::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: #FDD000;
+    /* 스크롤바의 색상 */
+
+    border-radius: 10px;
+
+}
+
+#placesList::-webkit-scrollbar-track {
+
+    background: #EEE;
+    /*스크롤바 뒷 배경 색상*/
+
+}
+
+#placesList {
+    overflow-y: auto;
+    height: 85%;
+    padding: 0 10px;
+}
+
+#placesList li {
+    cursor: pointer;
+    list-style: none;
+}
+
+#placesList li:hover {
+
+    background: lightgray;
+
+}
+
+#placesList .item {
+    margin-top: 8px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    height: 80px;
+}
+
+#placesList .item p {
+    font-size: 14.4px;
+    color: #666;
+}
+
+#placesList .item h5 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 5px 0 5px;
+}
+
+#placesList .item .info {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+#placesList .info .gray {
+    color: #8a8a8a;
+}
+
+#placesList .info .jibun {
+    padding-left: 26px;
+    background:
+        url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;
+    display: none;
+}
+
+#placesList .info .road {}
+
+#placesList .info .tel {}
+
+#placesList .item .markerbg {
+    display: block;
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    width: 40px;
+    height: 50px;
+    transform: translate(0%, -50%);
+    background: url("/kgCoffee/img/icon/marker.png") center;
+}
+
+
+
+
+#pagination {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#pagination a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#pagination .on {
+    font-weight: bold;
+    cursor: default;
+    color: #777;
+}
+
+.location {
+    width: 100%;
+    display: none;
+    box-sizing: border-box;
+
+    height: 91%;
+}
+
+.location.active {
+    display: block;
+}
+
+.location .location_title_wrap {
+    width: 100%;
+    height: 22%;
+    padding: 20px;
+    background: #fdd000;
+
+    text-align: center;
+
+}
+
+.location_title_wrap .location_title {
+    margin-bottom: 20px;
+}
+
+.location_title_wrap .location_title b {
+
+    font-size: 18.2px;
+    font-weight: 400;
+
+
+
+}
+
+.location_title_wrap .location_content {
+    font-size: 13px;
+
+}
+
+.location_list_wrap {
+    width: 100%;
+    padding: 20px;
+    height: 78%;
+
+}
+
+.location_list_wrap .location_list {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 10px;
+
+
+}
+
+
+
+.location_list_wrap .location_list ul.store_area_search_list.off {
+
+    display: none;
+
+}
+
+.location_list_wrap .location_list ul.store_area_search_list_result.off {
+
+    display: none;
+}
+
+.location_list_wrap .location_list ul {
+
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    list-style: none;
+
+    margin-block-start: 1em;
+    margin-block-end: 1en;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: normal;
+    word-break: keep-all;
+    line-height: 1.4;
+
+
+}
+
+.location_list_wrap .location_list::-webkit-scrollbar {
+    z-index: 30;
+    width: 5px;
+    height: 5px;
+    background: #f2f2f2;
+}
+
+.location_list_wrap .location_list::-webkit-scrollbar-thumb {
+    background: #fdd000;
+}
+
+.location_list_wrap .location_list::selection {
+    background: #fdd000;
+    color: #1c1c1b;
+}
+
+.location_list_wrap .location_list li {
+
+    width: calc(1/2 * 100% - (1 - 1 / 2) * 10px);
+
+    display: inline-block;
+
+    font-size: 13px;
+    font-weight: 300;
+    vertical-align: middle;
+
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    margin-top: 10px;
+
+}
+
+.location_list_wrap .location_list li:nth-child(-n+2) {
+
+    margin-top: 0px;
+
+
+}
+
+.location_list_wrap .location_list li:nth-child(2n) {
+
+    margin-right: 0px;
+
+
+}
+
+@media (max-width: 600px) {
+
+    #map {
+   
+        width: 100%;
+        height: 60vh;
+      
+    }
+
+
+
+	.map_wrap{
+	
+		height:auto;
+		max-height: 450px;
+		
+	}
+    #menu_wrap {
+
+
+        min-height: 30vh;
+        height: auto;
+      
+        width: 100%;
+
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .find_store_wrap {
+    
+    	height: auto;
+    }
+
+    .find_store_wrap .find_store_cont {
+    
+    	height: auto;
+    	
+    }
+
+
+    .bg_white {
+        
+    }
+
+    #menu_wrap .find_store_header {
+
+        
+        height: 45px;
+
+
+    }
+
+
+
+    #menu_wrap .find_store_header>ul {
+
+
+    }
+
+    #menu_wrap .find_store_header>ul>li {
+
+        font-size: 12px;
+
+    }
+
+    #menu_wrap .find_store_header>ul>li.active {
+        color: #000;
+        background: #FFF;
+
+
+    }
+
+    #menu_wrap .find_store_header * {
+
+    }
+
+    #menu_wrap .search_count {
+        text-align: center;
+        border-top: 1PX SOLID rgba(0, 0, 0, 0.1);
+
+    }
+
+    #menu_wrap .search {
+
+        min-height: 220px;
+        height: auto;
+        max-height: 430px;    
+        
+    }
+
+    #menu_wrap .search.active {
+
+      
+
+    }
+
+    #menu_wrap .search .quick_search {
+        height: 170px;
+
+        background: #FFF;
+
+
+    }
+
+    #menu_wrap .search .quick_search .quick_search_title b {
+
+        font-size: 24px;
+ 
+
+    }
+
+    #menu_wrap .search .quick_search .quick_search_content {
+
+        margin: 20px 0;
+        font-size: 12px;
+
+    }
+
+    #menu_wrap .search .quick_search_inner_wrap {
+
+        width: 100%;
+        height: 35px;
+    }
+
+    #menu_wrap .search .quick_search_inner {
+
+
+        box-shadow: 0px 0px 0px 1px #ddd;
+
+    }
+
+    #menu_wrap .search .quick_search_inner input {
+
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+
+        padding: 5px 15px;
+
+        border: 0px solid #000;
+        border-radius: 4px;
+
+    }
+
+    #menu_wrap .search .quick_search_inner a i {
+
+        font-weight: 900;
+
+
+    }
+
+    #menu_wrap .search_result {
+        min-height: 15%;
+        height: auto;
+        max-height: 250px;
+        padding-top: 0;
+
+    }
+
+    #placesList::-webkit-scrollbar {
+
+        width: 5px;
+        height: 5px;
+        background: #f2f2f2;
+
+    }
+
+    #placesList::-webkit-scrollbar-thumb {
+        height: 30%;
+        /* 스크롤바의 길이 */
+        background: #FDD000;
+        /* 스크롤바의 색상 */
+
+        border-radius: 10px;
+
+    }
+
+    #placesList::-webkit-scrollbar-track {
+
+        background: #EEE;
+        /*스크롤바 뒷 배경 색상*/
+
+    }
+
+    #placesList {
+
+        height: auto;
+        max-height: 190px;
+       
+    }
+
+    #placesList li {
+    
+
+    }
+
+    #placesList li:hover {
+
+     
+
+    }
+
+    #placesList .item {
+
+    }
+
+    #placesList .item p {
+        font-size: 12.96px;
+  
+    }
+
+    #placesList .item h5 {
+  
+    }
+
+    #placesList .item .info {
+
+    }
+
+
+    #placesList .info .gray {
+      
+    }
+
+    #placesList .info .jibun {
+    
+    }
+
+    #placesList .info .road {}
+
+    #placesList .info .tel {}
+
+    #placesList .item .markerbg {
+
+    }
+
+
+
+
+    #pagination {
+     
+    }
+
+    #pagination a {
+
+    }
+
+    #pagination .on {
+
+    }
+
+    .location {
+ 
+        height: 91%;
+    }
+
+    .location.active {
+        display: block;
+    }
+
+    .location .location_title_wrap {
+        width: 100%;
+        height: 20%;
+        padding: 20px;
+        background: #fff;
+
+        text-align: center;
+
+    }
+
+    .location_title_wrap .location_title {
+        margin-bottom: 20px;
+    }
+
+    .location_title_wrap .location_title b {
+
+        font-size: 24px;
+        font-weight: 400;
+
+
+
+    }
+
+    .location_title_wrap .location_content {
+        font-size: 12px;
+        font-weight: 300;
+
+    }
+
+    .location_list_wrap {
+
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+       
+        padding: 15px;
+        height: 300px;
+
+    }
+
+    .location_list_wrap .location_list {
+      
+        height: 100%;
+        
+
+    }
+
+
+
+    .location_list_wrap .location_list ul.store_area_search_list.off {
+
+  
+
+    }
+
+    .location_list_wrap .location_list ul.store_area_search_list_result.off {
+
+     
+    }
+
+    .location_list_wrap .location_list ul {
+
+
+
+        font-size: 14px;
+        font-weight: 700;
+   
+
+
+    }
+
+    .location_list_wrap .location_list::-webkit-scrollbar {
+
+    }
+
+    .location_list_wrap .location_list::-webkit-scrollbar-thumb {
+  
+    }
+
+    .location_list_wrap .location_list::selection {
+   
+    }
+
+    .location_list_wrap .location_list li {
+
+        width: calc(1/2 * 100% - (1 - 1 / 2) * 10px);
+
+        display: inline-block;
+
+        font-size: 13px;
+        font-weight: 300;
+        vertical-align: middle;
+
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        margin-right: 10px;
+        margin-top: 10px;
+
+    }
+
+    .location_list_wrap .location_list li:nth-child(-n+2) {
+
+        margin-top: 0px;
+
+
+    }
+
+    .location_list_wrap .location_list li:nth-child(2n) {
+
+        margin-right: 0px;
+
+
+    }
+    
+    .footer{
+    margin-top :50px;
+    }
+
+
+}

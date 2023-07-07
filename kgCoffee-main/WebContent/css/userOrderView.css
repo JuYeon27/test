@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+
+.page_name {
+	display: inline-block;
+	width: 700px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px, rgba(0, 0, 0, 0.16) 0px 0px 1px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    padding: 15px 0px;
+	text-align: center;
+	
+	font-size: 14px;
+}
+
+
+.orderOneView {
+	display: grid;
+	gap: 1.5rem;
+	align-content:center;
+	width: 650;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px, rgba(0, 0, 0, 0.16) 0px 0px 1px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 2.5px;
+    padding: 20px 24px 10px;
+}
+
+
+.order_date_view {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.hr_view {
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+}
+
+.order_total_view {
+    padding: 10px 20px 10px;
+    line-height:1.7;
+}
+
+.order_total_view strong {	
+    font-size: 23px;
+}
+
+.order_total_view p {
+    font-size: 20px;
+}
+
+.content {
+	overflow: hidden;
+    width: 100%;
+    max-height: 0px;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.content.show {
+    max-height: 3000px;
+    transition: all 1s ease-in-out;
+}
+
+
+
+

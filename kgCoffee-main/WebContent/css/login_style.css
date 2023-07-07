@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+*{
+	font-family: 'Noto Sans KR', sans-serif; /* 구글폰트 */
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+}
+
+html {
+	font-size: 62.5%;
+	overflow: scroll
+}
+
+/* login -------------------------------------------------------- */
+body {
+	background: url('../img/login-background.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 16px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-form-box {
+	position: relative;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h2{
+    font-size: 3rem;
+    color: #fff;	
+    text-align: center;
+    margin: 10px;
+}
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    top: -10px;
+    color: #fff;
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1em;
+    top: 20px;
+}
+
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.forget label input{
+    margin-right: 3px;
+    
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 6px;
+}
+
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* join -------------------------------------------------------- */
+.container {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.join-form-box {
+	position: relative;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.join-form-box .input-box {
+	position: relative;
+	margin: 20px 0;
+	width: 310px;
+	border-bottom: 2px solid #fff;
+}
+
+.join-form-box .input-box input {
+	width: 100%;
+	height: 34px;
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 0 20px 0 5px;
+	color: #fff;
+	font-size: 16px;
+}
+
+input::placeholder {
+	color: #fff;
+}
+
+.font {
+	color: #fff;
+	font-size: 16px;
+	margin: 2px;
+}
+
+.btn {
+	width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 6px;
+}
+
+.join-label {
+	float: right;
+    font-size: 15px;
+}
+

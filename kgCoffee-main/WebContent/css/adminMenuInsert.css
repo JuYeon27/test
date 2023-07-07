@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+body {
+	background-color: #f4f6f8;
+}
+
+.menuInsert {
+    min-height: calc(80vh - 10rem);
+    display: flex;
+    justify-content: center;
+}
+
+.menu-mg {
+    margin: 30px auto;
+}
+
+.menu_name {
+    display: inline-block;
+    width: 700px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px, rgba(0, 0, 0, 0.16) 0px 0px 1px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    padding: 15px 0px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.menuView {
+	display: grid;
+    gap: 1.5rem;
+    align-content: center;
+    width: 700px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px, rgba(0, 0, 0, 0.16) 0px 0px 1px 0px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    padding: 30px 35px 30px;
+}
+
+/* .modify-msg {
+	font-size: 16px;
+	margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.modify-msg strong {
+	color: #22a6b3;
+} */
+
+.img-btn{
+	
+	 background-color:#ecf0f1;
+	 border: 1px solid black;
+	 border-radius: 30%;
+	 cursor: pointer;
+}
+
+.img-btn:hover {
+	
+	background-color: black;
+	color: white;
+		
+}
+	
+
+
+.menu-table {
+	width: 100%;
+    border-top: 2px solid #969696;
+    border-bottom: 2px solid #969696;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.menu-table tr {
+	display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.menu-table th {
+	width: 100px;
+	background-color: #dfe4ea;
+    text-align: left;
+    white-space: nowrap;
+    padding: 14px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-table td {
+	border-left: 1px solid #ddd;
+	padding: 14px 30px;
+    border-bottom: 1px solid #ddd;
+        display: table-cell;
+    vertical-align: inherit;
+}
+
+
+.menu-table input {
+	border-bottom: solid 2px #747d8c;
+	/* width: 110px; */
+}
+
+
+
+.menu-button {
+	margin-top: 25px;
+    text-align: center;
+    
+}
+
+.btn_design { 
+	font-size: 16px;
+    letter-spacing: -.3px;
+    overflow: hidden;
+    width: 15%;
+    padding: 8px 6px 7px;
+    border-radius: 6px;
+    background-color: #ecf0f1;
+    font-weight: 500;
+    color: #2f3640;
+}
+
+.btn_design:hover { 
+	font-size: 16px;
+    letter-spacing: -.3px;
+    overflow: hidden;
+    width: 15%;
+    padding: 8px 6px 7px;
+    border-radius: 6px;
+    background-color: #f9ca24;
+    font-weight: 500;
+    color: #fff;
+}
